@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tunsisa Forum</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Tunisia Forum</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+
+
+
+
+<!-- Page content -->
+
+
+  <!-- The Band Section -->
+
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+           <ul   th:each="post : ${Posts}" class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding" >  <p th:text= "${post.postt}"> </p>
+        
+         </li>
+  
+      </ul>
+         <h2 class="w3-wide w3-center">Comments</h2>
+      </div>
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+   
+ 
+      <div   th:each="Comment : ${Comments}" class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+       
+          <div class="w3-container w3-white">
+            <p><b>Tunis</b></p>
+            <p class="w3-opacity">10/02/2020</p>
+            <p th:text= "${Comment.comment}"></p>
+           
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+ <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">Want to add a comment  ?</h2>
+    <p class="w3-opacity w3-center"><i>  That's easy !</i></p>
+    <div class="w3-row w3-padding-32">
+     
+      <div class="w3-col m12 w3-center">
+       <center>
+        <form name="form1" >
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-col m3">
+              <input class="w3-input w3-border" type="text" placeholder="Your Id" required name="id">
+            </div>
+            <div class="w3 col m9">
+              <input class="w3-input w3-border" type="text" placeholder="Comment" required name="comment">
+            </div>
+          </div>
+         
+          <button name='btn' class="w3-button w3-black w3-section w3-col m3" type="submit" onclick="MyPostFunction()">Add</button>
+        </form>
+      </div>
+      </center>
+      
+    </div>
+  </div>
+  
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+
+  <p class="w3-medium">This is a first version of our forum by  <a href="" target="_blank">Ines Ben Youssef and Seifeddine Skini</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+Url='http://localhost:9093/Comments'
+	const data={ "idUser" : document.getElementById("Idp").value ,
+			"idpost" : 1,  "comment" : document.getElementById("comment").value  }
+	function MyPostFunction2(){
+		
+		$.ajax({
+			url : Url ,
+			type : "POST",
+			data : data ,
+			contentType : "applicaton/json",
+			dataType : "json",
+			success: function(){
+				console.log('Post added')}
+		} );
+				
+
+
+}	
+
+
+
+</script>
+
+</body>
+</html>
