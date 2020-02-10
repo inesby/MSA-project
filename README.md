@@ -25,8 +25,13 @@ This project was done by
 
 | Path | Type | Function |
 | --- | --- | --- |
-| git status | List all new or modified files | q
-| git diff | Show file differences that haven't been staged | q
+| /Users | GET | List all users |
+| /Users{id} | GET| List users by their id |
+| /Users/age/{ageLimit} | GET| List users with age greater than ageLimit |
+| /Users/names/{recherche} | GET| List users with specific names |
+| /Users | PUT| Creates a new user |
+| /Users| POST | Creates a new user |
+
 
 
 
