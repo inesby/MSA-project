@@ -74,5 +74,13 @@ This project was done by
 
 ![Capture1](https://user-images.githubusercontent.com/40526410/74184266-c5500980-4c46-11ea-8bee-66f2987082a0.JPG)
 
+![Capture2](https://user-images.githubusercontent.com/40526410/74184464-21b32900-4c47-11ea-998c-cff6ed87896a.JPG)
 
+![Capture3](https://user-images.githubusercontent.com/40526410/74184500-3099db80-4c47-11ea-861a-2c671f550a9a.JPG)
+
+![Capture4](https://user-images.githubusercontent.com/40526410/74184534-40b1bb00-4c47-11ea-8017-05dd13354759.JPG)
+
+![Capture5](https://user-images.githubusercontent.com/40526410/74184573-4effd700-4c47-11ea-8da7-a54c1b76d308.JPG)
+
+![Capture6](https://user-images.githubusercontent.com/40526410/74184616-60e17a00-4c47-11ea-942a-900c40da08f3.JPG)
 
