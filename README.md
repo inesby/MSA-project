@@ -21,9 +21,12 @@ This project was done by
 **You can find the documentation of every micro service in a readme in the microservice directory**
 
 
-## Built With
+## User Microservice EndPoint
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+| Path | Type | Function |
+| --- | --- | --- |
+| git status | List all new or modified files | q
+| git diff | Show file differences that haven't been staged | q
+
+
 
