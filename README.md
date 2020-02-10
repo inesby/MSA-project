@@ -16,9 +16,8 @@ This project was done by
 
 - **ForumUI Microsevice:** Responsible for all operations of displaying the forums through connsoming the other microservices.
 
-- **Config Microservice:** Responsible for all operations that includes all the configurations of all these microservices.
 
-**You can find the documentation of every micro service in a readme in the microservice directory**
+**You can find the documentation of every micro service in this readme **
 
 
 ## User Microservice EndPoints
