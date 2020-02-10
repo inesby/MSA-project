@@ -47,7 +47,7 @@ This project was done by
 
 **The application is running on port 9092**
 
-## Post Microservice EndPoints
+## Comment Microservice EndPoints
 
 | Path | Type | Function |
 | --- | --- | --- |
